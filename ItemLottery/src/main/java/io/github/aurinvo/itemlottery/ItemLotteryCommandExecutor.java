@@ -23,15 +23,16 @@ public class ItemLotteryCommandExecutor implements CommandExecutor {
 					sender.sendMessage("Usage: /setlotteryitem [ITEM] [AMOUNT]");
 					return false;
 				} 
-
-				plugin.setInfo(0, args[0]);                                                     //Sets what item to show when asked.
-				plugin.setInfo(1, args[1]);                                                     //Sets the amount of the item to show when asked.
-
 				args[0]=args[0].toUpperCase();
-				args[0]=args[0].replace(' ', '_');                                              //Proper format for Materials.
-
+				
 				plugin.setStack(new ItemStack(Material.getMaterial(args[0].toString())));       //Sets the item to give.
 				plugin.setStackNum(Integer.parseInt(args[1].toString()));                       //Sets the amount of the item to give.
+
+
+				args[0]=args[0].replace('_', ' ');                                              //Proper format for Materials.
+				
+				plugin.setInfo(0, args[0]);                                                     //Sets the prize item info.
+				plugin.setInfo(1, args[1]);                                                     //Sets info about the number of prize items upon win.
 
 				return true;
 			} 

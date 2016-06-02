@@ -8,7 +8,7 @@ commands:
  setlotterystack:
   description: Sets the stack to give a player upon winning, and how many to give.
   permission: itemlottery.setlotterystack
-  usage: Usage: /SetLotteryStack [ITEM] [AMOUNT]
+  usage: Usage: /SetLotteryStack [ITEM] [AMOUNT] (Use underscores, not spaces)
  setlotterychance:
   description: Sets the chance to win on a roll.
   permission: itemlottery.setlotterychance
